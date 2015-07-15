@@ -313,13 +313,13 @@ static UIImage* _imageOfSuperid_ad_close = nil;
             return [_characterDitionary objectForKey:key];
         }else{
             
-            return @"可爱";
+            return @"幸运";
         }
         
         
     }else{
         
-        return @"可爱";
+        return @"幸运";
     }
 }
 
