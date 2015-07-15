@@ -147,10 +147,10 @@
 
 - (void)showInView:(UIView *)view withFaceInfo: (NSDictionary *)info advertisementImage: (UIImage *)image borderColor: (UIColor *)color{
     
-        if (!info) {
-    
-            return;
-        }
+    if (!info) {
+
+        return;
+    }
     
     _titleLable.text  =[self featureTransform:info];
     _adImageView.image = image;
@@ -297,7 +297,7 @@ static UIImage* _imageOfSuperid_ad_close = nil;
 
 - (NSString *)featureTransform:(NSDictionary *)info{
     
-    NSString *str = [NSString stringWithFormat:@"我是一个%@%@的%@后",[self getUserCharacterStr:info],[self getUserAppearanceStrFromInfo:info],[self getGenerationStr:info]];
+    NSString *str = [NSString stringWithFormat:@"我是一个%@%@的%@",[self getUserCharacterStr:info],[self getUserAppearanceStrFromInfo:info],[self getGenerationStr:info]];
     return str;
     
 }
@@ -313,13 +313,13 @@ static UIImage* _imageOfSuperid_ad_close = nil;
             return [_characterDitionary objectForKey:key];
         }else{
             
-            return @"";
+            return @"可爱";
         }
         
         
     }else{
         
-        return @"";
+        return @"可爱";
     }
 }
 
@@ -361,9 +361,16 @@ static UIImage* _imageOfSuperid_ad_close = nil;
 - (NSString *)getGenerationStr:(NSDictionary *)info{
 
     NSString *str = [info objectForKey:@"generation"];
-    NSString *ageStr = [str substringToIndex:2];
+    if (str) {
+        
+        NSString *ageStr = [str substringToIndex:2];
+        ageStr = [NSString stringWithFormat:@"%@后",ageStr];
+        return ageStr;
+    }else{
+        
+        return @"人";
+    }
     
-    return ageStr;
 }
 
 @end
