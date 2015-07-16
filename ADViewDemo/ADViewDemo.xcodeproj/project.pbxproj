@@ -14,7 +14,8 @@
 		03A1DE6D1B561137002A0993 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A1DE6C1B561137002A0993 /* Images.xcassets */; };
 		03A1DE701B561137002A0993 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A1DE6E1B561137002A0993 /* LaunchScreen.xib */; };
 		03A1DE7C1B561137002A0993 /* ADViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A1DE7B1B561137002A0993 /* ADViewDemoTests.m */; };
-		03A1DE871B561152002A0993 /* SIDADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A1DE861B561152002A0993 /* SIDADView.m */; };
+		03C2DB591B575F1F004F1EC9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 03C2DB561B575F1F004F1EC9 /* .gitignore */; };
+		03C2DB5A1B575F1F004F1EC9 /* SIDADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C2DB581B575F1F004F1EC9 /* SIDADView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +42,9 @@
 		03A1DE751B561137002A0993 /* ADViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A1DE7A1B561137002A0993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03A1DE7B1B561137002A0993 /* ADViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADViewDemoTests.m; sourceTree = "<group>"; };
-		03A1DE851B561152002A0993 /* SIDADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIDADView.h; sourceTree = "<group>"; };
-		03A1DE861B561152002A0993 /* SIDADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIDADView.m; sourceTree = "<group>"; };
+		03C2DB561B575F1F004F1EC9 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		03C2DB571B575F1F004F1EC9 /* SIDADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIDADView.h; sourceTree = "<group>"; };
+		03C2DB581B575F1F004F1EC9 /* SIDADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIDADView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,7 @@
 		03A1DE531B561137002A0993 = {
 			isa = PBXGroup;
 			children = (
-				03A1DE881B561159002A0993 /* SIDADView */,
+				03C2DB551B575F1F004F1EC9 /* SIDADView */,
 				03A1DE5E1B561137002A0993 /* ADViewDemo */,
 				03A1DE781B561137002A0993 /* ADViewDemoTests */,
 				03A1DE5D1B561137002A0993 /* Products */,
@@ -123,13 +125,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		03A1DE881B561159002A0993 /* SIDADView */ = {
+		03C2DB551B575F1F004F1EC9 /* SIDADView */ = {
 			isa = PBXGroup;
 			children = (
-				03A1DE851B561152002A0993 /* SIDADView.h */,
-				03A1DE861B561152002A0993 /* SIDADView.m */,
+				03C2DB561B575F1F004F1EC9 /* .gitignore */,
+				03C2DB571B575F1F004F1EC9 /* SIDADView.h */,
+				03C2DB581B575F1F004F1EC9 /* SIDADView.m */,
 			);
 			name = SIDADView;
+			path = ../SIDADView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C2DB591B575F1F004F1EC9 /* .gitignore in Resources */,
 				03A1DE6B1B561137002A0993 /* Main.storyboard in Resources */,
 				03A1DE701B561137002A0993 /* LaunchScreen.xib in Resources */,
 				03A1DE6D1B561137002A0993 /* Images.xcassets in Resources */,
@@ -234,7 +239,7 @@
 			files = (
 				03A1DE681B561137002A0993 /* ViewController.m in Sources */,
 				03A1DE651B561137002A0993 /* AppDelegate.m in Sources */,
-				03A1DE871B561152002A0993 /* SIDADView.m in Sources */,
+				03C2DB5A1B575F1F004F1EC9 /* SIDADView.m in Sources */,
 				03A1DE621B561137002A0993 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +435,7 @@
 				03A1DE811B561137002A0993 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03A1DE821B561137002A0993 /* Build configuration list for PBXNativeTarget "ADViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +444,7 @@
 				03A1DE841B561137002A0993 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

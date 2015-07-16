@@ -8,8 +8,8 @@
 
 #import "SIDADView.h"
 
-#define superid_ad_color_title          HEXRGB(0xFE8904)
-#define superid_ad_color_tips           HEXRGB(0x929292)
+#define superid_ad_color_title          HEXRGB(0x0099cc)
+#define superid_ad_color_tips           HEXRGB(0x333333)
 
 //RGB Color transform（16 bit->10 bit）
 #define HEXRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
@@ -147,10 +147,10 @@
 
 - (void)showInView:(UIView *)view withFaceInfo: (NSDictionary *)info advertisementImage: (UIImage *)image borderColor: (UIColor *)color{
     
-        if (!info) {
-    
-            return;
-        }
+    if (!info) {
+
+        return;
+    }
     
     _titleLable.text  =[self featureTransform:info];
     _adImageView.image = image;
@@ -297,7 +297,7 @@ static UIImage* _imageOfSuperid_ad_close = nil;
 
 - (NSString *)featureTransform:(NSDictionary *)info{
     
-    NSString *str = [NSString stringWithFormat:@"我是一个%@%@的%@后",[self getUserCharacterStr:info],[self getUserAppearanceStrFromInfo:info],[self getGenerationStr:info]];
+    NSString *str = [NSString stringWithFormat:@"我是一个%@%@的%@",[self getUserCharacterStr:info],[self getUserAppearanceStrFromInfo:info],[self getGenerationStr:info]];
     return str;
     
 }
@@ -313,13 +313,13 @@ static UIImage* _imageOfSuperid_ad_close = nil;
             return [_characterDitionary objectForKey:key];
         }else{
             
-            return @"";
+            return @"幸运";
         }
         
         
     }else{
         
-        return @"";
+        return @"幸运";
     }
 }
 
@@ -361,9 +361,16 @@ static UIImage* _imageOfSuperid_ad_close = nil;
 - (NSString *)getGenerationStr:(NSDictionary *)info{
 
     NSString *str = [info objectForKey:@"generation"];
-    NSString *ageStr = [str substringToIndex:2];
+    if (str) {
+        
+        NSString *ageStr = [str substringToIndex:2];
+        ageStr = [NSString stringWithFormat:@"%@后",ageStr];
+        return ageStr;
+    }else{
+        
+        return @"人";
+    }
     
-    return ageStr;
 }
 
 @end
